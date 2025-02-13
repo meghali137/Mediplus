@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+
+/* 🔹 Smaller slider like before */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* ✅ Small image height */
+    overflow: hidden;
+    margin-top: 80px;
+    
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: contain; /* ✅ Prevents cropping */
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+  }
+
+/* 🔹 Text stays OUTSIDE the image */
+.slide-text {
+    position: absolute;
+    bottom: 30px; /* Moves text up */
+    left: 30px; /* Moves text more to the left */
+    text-align: left; /* Aligns text to the left */
+    color: #208787; /* Cyan color */
+    padding: 15px 20px;
+    font-size: 3rem; /* Keeps it BIG */
+    font-weight: bold;
+    max-width: 33%; /* Forces text to wrap in two lines */
+    border-radius: 5px;
+}
+
+
+/* 🔹 Subtitle remains readable */
+.slide-text p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+/* 🔥 Keep Button Readable */
+.slide-text .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.slide-text .btn:hover {
+    background: orange;
+    color: white;
+}
+
+/* Navigation Buttons */
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Indicators */
+.indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.indicator.active {
+    opacity: 1;
+    background-color: #ff6600;
+}

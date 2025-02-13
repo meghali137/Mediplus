@@ -1,11 +1,13 @@
 import '../../Styles/landing.css'
 import Navbar from '../navbar.jsx'
+import Header from '../Landing/header.jsx'
 
 const landing = () => {
     return(
         <>
-            <Navbar></Navbar>
+            <Navbar />
+            <Header />
         </>
-    )
-}
-export default landing
+    );
+};
+export default landing;

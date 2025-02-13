@@ -1,0 +1,92 @@
+body{
+    margin : 0;
+}
+.navbar{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 5px 25px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+    z-index: 1000;
+    margin-bottom: 10px; /* Adjust the space as needed */
+    
+}
+
+.logo{
+    width : 100px;
+    height: auto;
+    cursor: pointer;
+}
+ul{
+    flex: 1;
+    list-style: none;
+    text-align: center;
+}
+ul li{
+    display: inline-block;
+    margin: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.toggle{
+    width : 50px;
+    height: 50px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+.search{
+    display: flex;
+    align-items: center;
+    background-color: #242424;
+    padding: 15px 30px;
+    border-radius: 50px;
+    width: 400px;
+    height: 50px;
+
+}
+.search input{
+    padding : 6px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 18px;
+    max-width: 300px
+}
+.main{
+    width: 100vw;
+    min-height: 100vh;
+    transition: 0.5s;
+}
+.main.dark{
+    background: #222;
+}
+.dark .navbar{
+    background: black;
+    color: #fff
+}
+.dark .search{
+    background: #fff;
+}
+.dark .search input{
+    color: #222;
+}
+.dark .search input::placeholder{
+    color: #222;
+}
+.navbar .animation{
+    position: absolute;
+    height: 100%;
+    top:0;
+    z-index: 1;
+    background: #2ec9ef;
+    width: 100px;
+
+}
