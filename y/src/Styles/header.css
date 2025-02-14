@@ -5,11 +5,11 @@
     padding-top: 10px;
 }
 
-/* 🔹 Smaller slider like before */
+
 .slider-container {
     position: relative;
     width: 100%;
-    height: 300px; /* ✅ Small image height */
+    height: 300px; 
     overflow: hidden;
     margin-top: 80px;
     
@@ -19,7 +19,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-size: contain; /* ✅ Prevents cropping */
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0;
@@ -30,29 +30,29 @@
     opacity: 1;
   }
 
-/* 🔹 Text stays OUTSIDE the image */
+
 .slide-text {
     position: absolute;
-    bottom: 30px; /* Moves text up */
-    left: 30px; /* Moves text more to the left */
-    text-align: left; /* Aligns text to the left */
-    color: #208787; /* Cyan color */
+    bottom: 30px; 
+    left: 30px; 
+    text-align: left; 
+    color: #208787; 
     padding: 15px 20px;
-    font-size: 3rem; /* Keeps it BIG */
+    font-size: 3rem; 
     font-weight: bold;
-    max-width: 33%; /* Forces text to wrap in two lines */
+    max-width: 33%; 
     border-radius: 5px;
 }
 
 
-/* 🔹 Subtitle remains readable */
+
 .slide-text p {
     font-size: 1.2rem;
     font-weight: 400;
     margin-top: 8px;
 }
 
-/* 🔥 Keep Button Readable */
+
 .slide-text .btn {
     font-size: 1rem;
     padding: 10px 20px;
@@ -70,7 +70,7 @@
     color: white;
 }
 
-/* Navigation Buttons */
+
 .prev-btn,
 .next-btn {
     position: absolute;
@@ -94,7 +94,7 @@
     right: 10px;
 }
 
-/* Indicators */
+
 .indicators {
     position: absolute;
     bottom: 10px;

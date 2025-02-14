@@ -5,6 +5,8 @@ import Login from './Components/Authentication/login';
 import Landing from './Components/Landing/landing';
 import Navbar from './Components/navbar';
 import Header from './Components/Landing/header';
+import ProductSlider1 from './Components/Landing/slider1';
+import ProductSlider2 from './Components/Landing/slider2';
 import Footer from './Components/footer';
 
 const App = () => {
@@ -19,6 +21,8 @@ const App = () => {
             <Navbar theme={theme} setTheme={setTheme} />
       {/* Navbar should always be visible */}
       <Header />
+      <ProductSlider1 />
+      <ProductSlider2 />
       <Routes>
         <Route path="/landing" element={<Landing />} />
         <Route path="/signup" element={<Signup />} />
