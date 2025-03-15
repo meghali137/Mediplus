@@ -8,6 +8,7 @@ import Header from './Components/Landing/header';
 import ProductSlider1 from './Components/Landing/slider1';
 import ProductSlider2 from './Components/Landing/slider2';
 import Footer from './Components/footer';
+import ProductPage from './Components/Landing/productDetails';
 
 const App = () => {
   const current_theme = localStorage.getItem('current_theme');
@@ -23,6 +24,7 @@ const App = () => {
       <Header />
       <ProductSlider1 />
       <ProductSlider2 />
+      <ProductPage />
       <Routes>
         <Route path="/landing" element={<Landing />} />
         <Route path="/signup" element={<Signup />} />
