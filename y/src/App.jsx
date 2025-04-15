@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import {  Routes, Route } from 'react-router-dom';
 import Signup from './Components/Authentication/signup';
 import Login from './Components/Authentication/login';
 import Landing from './Components/Landing/landing';
@@ -10,6 +10,7 @@ import ProductSlider2 from './Components/Landing/slider2';
 import Footer from './Components/footer';
 import ProductPage from './Components/Landing/productDetails';
 
+
 const App = () => {
   const current_theme = localStorage.getItem('current_theme');
   const [theme, setTheme] = useState(current_theme ? current_theme : 'light');
@@ -18,24 +19,31 @@ const App = () => {
       localStorage.setItem('current_theme', theme);
   }, [theme])
   return (
+    
+    
     <div className={`main ${theme}`}>
+      
             <Navbar theme={theme} setTheme={setTheme} />
       {/* Navbar should always be visible */}
+      
       <Header />
       <ProductSlider1 />
       <ProductSlider2 />
       <ProductPage />
+
       <Routes>
         <Route path="/landing" element={<Landing />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/navbar" element={<Navbar />} />
+        
       </Routes>
 
       {/* Footer should always be visible */}
       <Footer />
+     
     </div>
+    
   );
-};
+}
 
 export default App;
